@@ -8,6 +8,8 @@ const up = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lo = "abcdefghijklmnopqrstuvwxyz";
 const sy = "!$&'()*+,-./:;=?@_~";
 
+type S = string & { length: 81, };
+
 /**
  * Ordered as mentioned by WHATWG.
  *
@@ -18,9 +20,9 @@ const sy = "!$&'()*+,-./:;=?@_~";
  * "An ASCII alpha is an ASCII upper alpha or ASCII lower alpha."
  *   Source: https://infra.spec.whatwg.org/#ascii-alpha
  */
-export const whatwg: string = `${di}${up}${lo}${sy}` as const;
+export const whatwg: S = `${di}${up}${lo}${sy}` as S;
 
 /**
  * In code points.
  */
-export const sorted: string = [...whatwg].sort().join("");
+export const sorted: S = [...whatwg].sort().join("") as S;
