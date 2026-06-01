@@ -18,9 +18,9 @@ const sy = "!$&'()*+,-./:;=?@_~";
  * "An ASCII alpha is an ASCII upper alpha or ASCII lower alpha."
  *   Source: https://infra.spec.whatwg.org/#ascii-alpha
  */
-export const whatwg = `${di}${up}${lo}${sy}` as const;
+export const whatwg: string = `${di}${up}${lo}${sy}` as const;
 
 /**
  * In code points.
  */
-export const sorted = [...whatwg].sort().join("");
+export const sorted: string = [...whatwg].sort().join("");
