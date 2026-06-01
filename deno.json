@@ -1,0 +1,6 @@
+{
+   "name": "@tpaefawzen/url-code-points"
+, "version": "0.1.0"
+, "exports": "./mod.ts"
+, "license": "WTFPL"
+}
